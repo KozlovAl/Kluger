@@ -1,0 +1,263 @@
+
+/*header*/
+
+.header-bg {
+	background: linear-gradient(to top, #92011a, #c21a20);
+	border-bottom: 14px solid #ae191d;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+	position:relative;
+	@include media('<desktop') {
+		justify-content: center;
+		flex-direction: column;
+	}
+	@include media('<tablet') {
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 20px;
+	}
+}
+
+.logo {
+	position:relative;
+	margin: 0 30px 40px 0;
+	z-index:1;
+	@include media('<desktop') {
+		align-self: center;
+		margin: 0 0px 20px 0;
+	}
+	@include media('<tablet') {
+		margin: 0 20px 10px 0;
+	}
+	img {
+		@include media('<tablet') {
+			width: 100%
+		}
+	}
+}
+
+/* menu styles */
+.menu {
+	align-self: flex-end;
+	font-size: 22px;
+	color: #ffffff;
+	@include media('<desktop') {
+		align-self: center;
+	}
+	li {
+		display: inline-block;
+		margin: 0 15px 0 0;
+		@include media('<tablet') {
+			display: block;
+			float:none;
+			margin:0;
+			padding:0;
+			color: #333;
+		}
+		a {
+			@include media('<tablet') {
+				display:block;
+				padding:3px 5px;
+			}
+			&:hover {
+				color: #333;
+				@include media('<tablet') {
+					color: red;
+				}
+			}
+		}	
+	}
+	.opener {
+		display:none;
+		@include media('<tablet') {
+			display:block;
+		}
+	}
+	.drop {
+		float:left;
+		@include media('<tablet') {
+			float:none;
+			overflow:hidden;
+			position:absolute;
+			top:100%;
+			left:0;
+			right:0;
+			z-index: 3;
+		}
+		ul {
+			@include media('<tablet') {
+				border: 1px solid #000;
+				background: #fff;
+				overflow: hidden;
+			}
+		}
+	}
+
+	li:hover > .dropdown {
+		visibility: visible;
+		opacity: 1;
+		transition: .8s;
+		@include media('<tablet') {
+			position: relative;
+			display: block;
+			transition:all 1s linear;
+			transform: translateX(-40%);
+		}
+	}
+}
+
+/* burger menu style */
+.opener {
+	float:right;
+	width:31px;
+	height:31px;
+	background:#000;
+	background:rgba(0, 0, 0, .5);
+	position:relative;
+	border-radius:3px;
+	text-indent:-9999px;
+	overflow:hidden;
+	&:hover {
+		opacity:.9;
+	}
+	&:before,
+	&:after,
+	& span{
+		background:#fff;
+		border-radius:4px;
+		position:absolute;
+		top:16px;
+		left:25%;
+		right:25%;
+		height:3px;
+		margin-top:-2px; /* height/2 */
+		transition:all 0.2s linear;
+	}
+	&:before,
+	&:after{
+		content:'';
+		top:10px;
+	}
+	&:after{
+		top:22px;
+	}
+}
+/* close button transition */
+.close-btn span,
+.active .opener span {
+	opacity:0;
+}
+
+.close-btn:after,
+.close-btn:before,
+.active .opener:after,
+.active .opener:before{
+	transform:rotate(45deg);
+	top:16px;
+	left:15%;
+	right:15%;
+}
+
+.close-btn:after,
+.active .opener:after{
+	transform:rotate(-45deg);
+}
+
+.submenu-holder {
+	position: relative;
+	z-index: 2;
+}
+
+.dropdown {
+	position: absolute;
+	left: 50%;
+	opacity: 0;
+	top: calc(100% + 20px);
+	transform: translateX(-50%);
+	visibility: hidden;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 20px;
+		left: 50%;
+		top: -20px;
+		transform: translateX(-50%);
+		width: 100%;
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 13.5px 20px 13.5px;
+		border-color: transparent transparent #ffffff transparent;
+		@include media('<tablet') {
+			display: none;
+		}
+	}
+	ul {
+		border: none!important;
+	}
+} 
+
+.drop-list {
+	padding: 5px;
+	background: white;
+	li {
+		margin: 0;
+		display: block;
+		background: white;
+		a {
+			color: black;
+			display: block;
+			padding: 10px;
+			@include media('<tablet') {
+				padding:3px 5px;
+			}
+			&:hover {
+				background: #deddda;
+				color: red;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.wrap.slide {
+	.drop {
+		@include media('<tablet') {
+			max-height:0;
+		  transition:all 0.25s linear;	
+		}
+	}	
+	.drop > ul {
+		@include media('<tablet') {
+			transition: transform 1s, opacity 1s, visibility 0.7s;
+			transform:translateY(-100%)
+		}
+	}
+}
+
+.wrap.slide.active {
+	.drop {
+		@include media('<tablet') {
+			max-height:4000px;
+			margin: 0 -15px;
+	  }
+	} 
+	.drop > ul {
+		@include media('<tablet') {
+			transform:translateY(0);
+		}
+	}
+}

@@ -1,0 +1,50 @@
+/*tad first page*/
+.js-tab-hidden {
+	display: block !important;
+	left: -9999px !important;
+	position: absolute !important;
+	top: -9999px !important;
+}
+
+.tabset {
+	width: 20%;
+}
+
+.tabset a {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	padding: 0 0 0 15px;
+}
+
+.tabset li {
+	color: white;
+	background: #ac191d;
+	margin: 5px 5px 5px 0;
+	height: 50px;
+}
+
+.container-tab {
+	display: flex;
+}
+
+.tab-content {
+	background: #333;
+	padding: 20px 5px;
+	margin: 5px 0;
+	width: 80%;
+}
+
+.slider-for img {
+	width: 100%;
+}
+
+.slider-nav {
+	padding: 20px 0 0 0;
+}
+
+.slider-nav img {
+	width: 100%;
+}
+
+

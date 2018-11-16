@@ -1,0 +1,33 @@
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
+	margin:0px;
+	padding:0px; 
+}
+
+body {
+	font-family: 'lucida_sans_unicoderegular', sans-serif;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a { 
+	text-decoration: none;
+	color: inherit;
+}
+
+p{
+	margin: 0;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 15px;
+}

@@ -1,0 +1,117 @@
+/*//////Contact page//////*/
+
+.contact-wrap {
+	background: #deddda;
+	h4 {
+		font-size: 20px;
+		color: #ac191d;
+		padding: 22px 0 0 22px;
+	}
+}
+
+.contact {
+	display: flex;
+	padding: 22px;
+}
+
+.contact-info,
+.contact-form {
+	width: 50%;
+}
+
+
+.contact-text {
+	font-size: 35px;
+	padding: 0 0 0 22px;
+}
+
+.contact-info li {
+	display: flex;
+	align-items: center;
+	padding: 0 0 50px 0;
+}
+
+.contact-info li span {
+	display: block;
+}
+
+.img-holder {
+	position: relative;
+	width: 65px;
+	height: 65px;
+	border-radius: 15px;
+	background: white;
+	margin: 0 15px 0 0;
+}
+
+.txt-contact,
+.contact-info a {
+	font-size: 22px;
+}
+
+.img-holder img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.contact-map {
+	border: 5px solid white;
+	margin: 0 15px;
+	&:hover {
+		transform: scale(1.02);
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.contact-info a:hover {
+	color: yellow;
+}
+
+
+
+.contact-form {
+	padding: 0 0 0 30px;
+}
+
+.form-holder {
+	label {
+		display: inline-block;
+		font-size: 22px;
+	}	
+	input,
+  textarea {
+		width: 100%;
+		height: 40px;
+		padding: 0 10px;
+		margin: 15px 0;
+		border: none;
+	}
+}
+
+#masseg {
+	height: 245px;
+	resize: none;
+	padding: 10px;
+}
+
+.submit-holder {
+	text-align: center;
+	padding: 20px 0 0 0;
+}
+
+#submit {
+	padding: 10px;
+	background: #333333;
+	color: white;
+	border: none;
+	&:hover {
+		color: #333333;
+		background: yellow;
+	}
+}
+

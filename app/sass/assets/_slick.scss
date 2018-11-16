@@ -1,0 +1,72 @@
+/*/////slick custom/////*/
+
+.slide-img {
+	display: flex;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+}
+
+.multiple-items .container {
+	min-height: 465px;
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: right;
+}
+
+.slick-dotted.slick-slider {
+	margin: 0;
+}
+
+.slick-dots {
+	bottom: 0;
+		li {
+			margin: 0;
+		}	
+}
+
+.slick-dots li button::before {
+	font-size: 50px;
+}
+
+.multiple-items {
+	display: flex;
+}
+
+.multiple-items .container {
+	padding: 0 0 20px 0;
+}
+
+.text-one {
+	font-size: 35px;
+	margin: 0 25px 0 0;
+}
+
+.text-two {
+	font-size: 60px;
+}
+
+.text-three {
+	font-size: 100px;
+	margin: 0 25px 0 0;
+	line-height: 0.8;
+}
+
+.text-four {
+	font-size: 70px;
+}
+
+.header h1 {
+	margin: 0 15px 0 0; 
+}
+
+.text-wrap {
+	display: block;
+}
+
+h1 .text-wrap:first-child {
+	line-height: 0;
+}
