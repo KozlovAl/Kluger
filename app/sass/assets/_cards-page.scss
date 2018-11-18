@@ -4,12 +4,14 @@
 }
 
 .cards-holder {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 	margin: 0 -45px;
+	@include media('<desktop') {
+		margin: 0 -30px;
+	}
+	@include media('<tablet') {
+		flex-direction: column;
+	}
 }
 
 .card-wrap {
@@ -17,6 +19,12 @@
 	flex-grow: 1;
 	width: 33.33%;
 	padding: 40px 45px 60px 45px;
+	@include media('<desktop') {
+		padding: 40px 30px 60px 30px;
+	}
+	@include media('<tablet') {
+		width: 100%;
+	}
 }
 
 .card {
@@ -33,6 +41,9 @@
 	font-size: 30px;
 	padding: 25px 0 0 0;
 	color: white;
+	@include media('<desktop') {
+		font-size: 26px;
+	}
 }
 
 /*partners*/
@@ -56,9 +67,19 @@
 	justify-content: space-between;
 	padding: 25px 0 0 0;
 	flex-wrap: wrap;
- 	li {
+	@include media('<desktop') {
+		justify-content: center
+	}
+	li {
 		text-align: center;
-	 	&:hover {
+		@include media('<desktop') {
+			margin: 10px 20px;
+		}
+		@include media('<tablet') {
+			width: 25%;
+			margin: 10px 20px;
+		}
+		&:hover {
 			transform: scale(1.02);
 		}
 	}	

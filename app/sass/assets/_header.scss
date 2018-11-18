@@ -261,3 +261,26 @@
 		}
 	}
 }
+
+.side-push.active {
+	.menu > .opener:after {
+		@include media('<tablet') {
+			top: 20px;
+		}
+	}
+	.menu > .opener span {
+		@include media('<tablet') {
+		 opacity: 1;
+	  }
+  }
+}  
+
+.resize-active {
+	.hold,
+	.drop,
+	.drop > ul {
+		@include media('<tablet') {
+		 transition:none !important;
+	  }
+	}  
+}

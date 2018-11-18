@@ -1,4 +1,28 @@
-/*/////slick custom/////*/
+.multiple-items {
+	display: flex;
+	.container {
+		padding: 0 0 20px 0;
+		min-height: 465px;
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+		@include media('<desktop') {
+			min-height: 290px;
+		}
+		@include media('<tablet') {
+			min-height: 230px;
+		}
+	}
+	h1 {
+		margin: 0 25px 15px 0; 
+		.text-wrap:first-child {
+			line-height: 0;
+		}
+	}
+}
 
 .slide-img {
 	display: flex;
@@ -6,67 +30,58 @@
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 }
-
-.multiple-items .container {
-	min-height: 465px;
-	display: flex;
-	width: 100%;
-	justify-content: flex-end;
-	flex-direction: column;
-	align-items: flex-end;
-	text-align: right;
-}
-
-.slick-dotted.slick-slider {
-	margin: 0;
-}
-
-.slick-dots {
-	bottom: 0;
-		li {
-			margin: 0;
-		}	
-}
-
-.slick-dots li button::before {
-	font-size: 50px;
-}
-
-.multiple-items {
-	display: flex;
-}
-
-.multiple-items .container {
-	padding: 0 0 20px 0;
+.text-wrap {
+	display: block;
 }
 
 .text-one {
 	font-size: 35px;
 	margin: 0 25px 0 0;
+	@include media('<tablet') {
+		font-size: 17px;
+		margin: 0 12px 0 0;
+	}
 }
 
 .text-two {
 	font-size: 60px;
+	@include media('<tablet') {
+		font-size: 30px;
+	}
 }
 
 .text-three {
 	font-size: 100px;
 	margin: 0 25px 0 0;
 	line-height: 0.8;
+	@include media('<tablet') {
+		font-size: 50px;
+		margin: 0 12px 0 0;
+		line-height: 1;
+	}
 }
 
 .text-four {
 	font-size: 70px;
+	@include media('<tablet') {
+		font-size: 35px;
+	}
 }
 
-.header h1 {
-	margin: 0 15px 0 0; 
+/*/////slick custom/////*/
+
+
+.slick-dotted.slick-slider {
+	margin: 0;
 }
 
-.text-wrap {
-	display: block;
+.slick-dots {
+	bottom: 10px;
+		li {
+			margin: 0;
+			button::before {
+				font-size: 50px;
+			}
+		}	
 }
 
-h1 .text-wrap:first-child {
-	line-height: 0;
-}

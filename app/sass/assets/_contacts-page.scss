@@ -7,33 +7,62 @@
 		color: #ac191d;
 		padding: 22px 0 0 22px;
 	}
-}
-
-.contact {
-	display: flex;
-	padding: 22px;
+	.contact-text {
+		font-size: 35px;
+		padding: 0 0 0 22px;
+		@include media('<phone') {
+			font-size: 30px;
+			padding: 0;
+		}
+	}
+	.contact {
+		display: flex;
+		padding: 22px;
+		@include media('<desktop') {
+			padding: 22px 0;
+		}
+		@include media('<tablet') {
+			flex-direction: column;
+		}
+	}
 }
 
 .contact-info,
 .contact-form {
 	width: 50%;
+	@include media('<tablet') {
+		width: 100%;
+	}
 }
 
-
-.contact-text {
-	font-size: 35px;
-	padding: 0 0 0 22px;
-}
-
-.contact-info li {
-	display: flex;
-	align-items: center;
-	padding: 0 0 50px 0;
-}
-
-.contact-info li span {
-	display: block;
-}
+.contact-info {
+	@include media('<tablet') {
+			margin: 0 0 20px 0;
+		}
+	li {
+		display: flex;
+		align-items: center;
+		padding: 0 0 50px 0;
+		span {
+			display: block;
+		}
+	}
+	a {
+		font-size: 22px;
+		@include media('<desktop') {
+			font-size: 18px;
+		}
+		&:hover {
+			color: yellow;
+		}
+	}
+ .txt-contact {
+		font-size: 22px;
+		@include media('<desktop') {
+			font-size: 18px;
+		}
+	}
+}	
 
 .img-holder {
 	position: relative;
@@ -42,46 +71,49 @@
 	border-radius: 15px;
 	background: white;
 	margin: 0 15px 0 0;
-}
-
-.txt-contact,
-.contact-info a {
-	font-size: 22px;
-}
-
-.img-holder img {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }
 
 .contact-map {
-	border: 5px solid white;
 	margin: 0 15px;
-	&:hover {
-		transform: scale(1.02);
+	@include media('<tablet') {
+		text-align: center;
 	}
 	img {
 		width: 100%;
+		border: 5px solid white;
+		&:hover {
+			border: 5px solid yellow;
+			transform: scale(1.02)
+		}		
+		@include media('<tablet') {
+			width: inherit;
+		}
+		@include media('<phone') {
+			width: 100%;
+		}
 	}
 }
 
-.contact-info a:hover {
-	color: yellow;
-}
-
-
-
 .contact-form {
 	padding: 0 0 0 30px;
+	@include media('<tablet') {
+		padding: 0;
+	}
 }
 
 .form-holder {
 	label {
 		display: inline-block;
 		font-size: 22px;
+		@include media('<desktop') {
+			font-size: 18px;
+		}
 	}	
 	input,
   textarea {

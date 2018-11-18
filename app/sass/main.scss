@@ -35,121 +35,14 @@ $media-expressions: (
 
 
 
-@media (min-width: 768px) and (max-width: 991px) { 
-
-	
-	.multiple-items .container {
-		min-height: 290px;
-	}	
-
-	.card-name {
-		font-size: 26px;
-	}
-
-
-	.wichtige-links {
-		margin: 0 40px 20px 0;
-	}
-
-	.txt-contact,
-	.contact-info li a,
-	.form-holder label {
-		font-size: 18px;
-	}
-
-	.all-partners {
-		justify-content: center;
-	}
-
-	.all-partners li {
-		margin: 10px 20px;
-	}
-
-}
-
-@media (max-width: 767px) {
-	/*header*/
-
-
 
 
 	
 
-	.side-push.active .menu > .opener:after{top:20px;}
-	.side-push.active .menu > .opener span{opacity:1;}
-	/* disable animation while browser is resizing */
-	.resize-active .hold,
-	.resize-active .drop,
-	.resize-active .drop > ul {
-		transition:none !important;
-	}
-	/*multiple-items*/
-	.multiple-items .container {
-		min-height: 230px;
-	}	
-
-	.text-one {
-		font-size: 17px;
-		margin: 0 12px 0 0;
-	}
-
-	.text-two {
-		font-size: 30px;
-	}
-
-	.text-three {
-		font-size: 50px;
-		margin: 0 12px 0 0;
-		line-height: 1;
-	}
-
-	.text-four {
-		font-size: 35px;
-	}
-
-	/*contact main*/
-
-	.contact-text {
-		font-size: 28px;
-	}
-
-	.contact {
-		flex-direction: column;
-		padding: 0;
-	}
-	.contact-info {
-		width: 100%;
-		margin: 0 0 20px 0;
-	}
-
-	.txt-contact,
-	.contact-info li a,
-	.form-holder label {
-		font-size: 18px;
-	}
-
-	.contact-form {
-		width: 100%;
-		padding: 0;
-	}
-
-	/*///////////cards///////////*/
-
-	.cards-holder {
-		flex-direction: column;
-	}
-
-	.card-wrap {
-		width: 100%;
-	}
-
-	.all-partners li {
-		width: 25%;
-		margin: 10px 20px;
-	}
 
 
 
 
 
-}
+
+
