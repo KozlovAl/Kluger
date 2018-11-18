@@ -332,7 +332,8 @@ p {
 
 /*footer*/
 .footer {
-  background: #333333; }
+  background: #333333;
+  border-top: 14px solid #958f82; }
   .footer .container {
     padding: 25px 20px 12px 20px; }
 
@@ -568,8 +569,7 @@ p {
 
 /*partners*/
 .partners-wrapp {
-  border-top: 14px solid #958f82;
-  border-bottom: 14px solid #958f82; }
+  border-top: 14px solid #958f82; }
 
 .partners {
   padding: 25px 0 30px 0; }
@@ -599,6 +599,27 @@ p {
     .all-partners li:hover {
       transform: scale(1.02); }
 
+.sondermaschinen {
+  padding: 30px 15px 20px 15px; }
+  .sondermaschinen h3 {
+    color: #ac191d;
+    font-size: 35px; }
+  .sondermaschinen p {
+    padding: 0 10px;
+    margin: 0 0 35px 0;
+    font-size: 20px;
+    max-width: 824px;
+    line-height: 1.5; }
+  .sondermaschinen .example {
+    padding: 25px 0;
+    display: block;
+    color: #ac191d;
+    font-size: 20px;
+    font-weight: bold; }
+
+.way img {
+  width: 100%; }
+
 /*tad first page*/
 .js-tab-hidden {
   display: block !important;
@@ -606,35 +627,79 @@ p {
   position: absolute !important;
   top: -9999px !important; }
 
-.tabset {
-  width: 20%; }
-
-.tabset a {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  padding: 0 0 0 15px; }
-
-.tabset li {
-  color: white;
-  background: #ac191d;
-  margin: 5px 5px 5px 0;
-  height: 50px; }
-
 .container-tab {
   display: flex; }
+  @media (max-width: 767px) {
+    .container-tab {
+      display: block; } }
+
+.tabset {
+  width: 20%; }
+  @media (max-width: 767px) {
+    .tabset {
+      display: flex;
+      width: 100%; } }
+  .tabset li {
+    color: white;
+    background: #ac191d;
+    height: 50px;
+    margin: 5px 5px 5px 0; }
+    @media (max-width: 767px) {
+      .tabset li {
+        margin: 0 5px 0 0; } }
+    .tabset li .active {
+      background: #333;
+      margin: 5px -5px 5px 0; }
+    .tabset li a {
+      display: flex;
+      height: 100%;
+      margin: 0;
+      align-items: center;
+      padding: 0 0 0 15px; }
+      @media (max-width: 767px) {
+        .tabset li a {
+          padding: 0 15px;
+          text-align: center; } }
 
 .tab-content {
   background: #333;
-  padding: 20px 5px;
+  padding: 20px 20px;
   margin: 5px 0;
   width: 80%; }
+  @media (max-width: 767px) {
+    .tab-content {
+      padding: 10px 10px;
+      width: 100%;
+      margin: 0; } }
 
-.slider-for img {
-  width: 100%; }
+.slider-for .slide-one {
+  outline: none; }
+  .slider-for .slide-one img {
+    width: 100%; }
 
 .slider-nav {
-  padding: 20px 0 0 0; }
+  padding: 20px 0 0 0;
+  margin: 0 -10px; }
+  .slider-nav .slide-two {
+    outline: none; }
+    .slider-nav .slide-two img {
+      width: 100%;
+      cursor: pointer;
+      padding: 0 10px; }
 
-.slider-nav img {
-  width: 100%; }
+.services-wrap .text {
+  display: block;
+  padding: 25px 0 0 0;
+  font-size: 20px;
+  font-weight: bold; }
+
+.services-wrap li {
+  padding: 5px 0; }
+  .services-wrap li a {
+    border-bottom: 1px solid black; }
+    .services-wrap li a:hover {
+      color: red; }
+
+.service-way {
+  vertical-align: middle;
+  padding: 0 5px; }

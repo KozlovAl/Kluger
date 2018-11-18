@@ -224,6 +224,7 @@ function initTabs() {
 
 
  $('.slider-for').slick({
+ 	autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
@@ -232,12 +233,13 @@ function initTabs() {
 });
 $('.slider-nav').slick({
   slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
   asNavFor: '.slider-for',
-  dots: false,
+  centerMode: true,
+  centerPadding: '0',
   focusOnSelect: true,
+  arrows: false,
 });
-
 
 
 // page init
