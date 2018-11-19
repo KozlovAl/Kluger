@@ -650,6 +650,9 @@ p {
     .tabset li .active {
       background: #333;
       margin: 5px -5px 5px 0; }
+      @media (max-width: 767px) {
+        .tabset li .active {
+          margin: 0; } }
     .tabset li a {
       display: flex;
       height: 100%;
