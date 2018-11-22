@@ -6,9 +6,11 @@
 .cards-holder {
 	display: flex;
 	margin: 0 -45px;
+
 	@include media('<desktop') {
 		margin: 0 -30px;
 	}
+
 	@include media('<tablet') {
 		flex-direction: column;
 	}
@@ -18,10 +20,13 @@
 	display: flex;
 	flex-grow: 1;
 	width: 33.33%;
+	word-break: break-word;
 	padding: 40px 45px 60px 45px;
+
 	@include media('<desktop') {
 		padding: 40px 30px 60px 30px;
 	}
+
 	@include media('<tablet') {
 		width: 100%;
 	}
@@ -39,8 +44,9 @@
 	display: block;
 	margin: 0 auto;
 	font-size: 30px;
-	padding: 25px 0 0 0;
+	padding: 25px 10px 0 10px;
 	color: white;
+
 	@include media('<desktop') {
 		font-size: 26px;
 	}
@@ -66,18 +72,22 @@
 	justify-content: space-between;
 	padding: 25px 0 0 0;
 	flex-wrap: wrap;
+
 	@include media('<desktop') {
 		justify-content: center
 	}
 	li {
 		text-align: center;
+
 		@include media('<desktop') {
 			margin: 10px 20px;
 		}
+
 		@include media('<tablet') {
 			width: 25%;
 			margin: 10px 20px;
 		}
+
 		&:hover {
 			transform: scale(1.02);
 		}

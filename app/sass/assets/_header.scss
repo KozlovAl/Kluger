@@ -1,38 +1,47 @@
 
 /*header*/
 
-.header-bg {
-	background: linear-gradient(to top, #92011a, #c21a20);
+.header {
+	background: linear-gradient(to top, #92011a, #c83035 70%);
 	border-bottom: 14px solid #ae191d;
 }
 
-.header {
+.header-block {
 	display: flex;
 	justify-content: space-between;
 	padding: 20px 0;
 	position:relative;
+
 	@include media('<desktop') {
 		justify-content: center;
 		flex-direction: column;
 	}
+
 	@include media('<tablet') {
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 20px;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 20px;
 	}
+
+	@include media('<phone') {
+		padding: 10px 0;
+	}	
 }
 
 .logo {
 	position:relative;
 	margin: 0 30px 40px 0;
 	z-index:1;
+
 	@include media('<desktop') {
 		align-self: center;
 		margin: 0 0px 20px 0;
 	}
+
 	@include media('<tablet') {
 		margin: 0 20px 10px 0;
 	}
+
 	img {
 		@include media('<tablet') {
 			width: 100%
@@ -71,23 +80,32 @@
 			}
 		}	
 	}
+
 	.opener {
 		display:none;
+
 		@include media('<tablet') {
 			display:block;
 		}
 	}
+
 	.drop {
 		float:left;
+
 		@include media('<tablet') {
 			float:none;
-			overflow:hidden;
 			position:absolute;
-			top:100%;
+			top: calc(100% + 13px);
 			left:0;
 			right:0;
+			margin: 0 -15px;
+			opacity: 0;
+			visibility: hidden;
+			overflow:hidden;
 			z-index: 3;
+			transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
 		}
+
 		ul {
 			@include media('<tablet') {
 				border: 1px solid #000;
@@ -101,6 +119,7 @@
 		visibility: visible;
 		opacity: 1;
 		transition: .8s;
+
 		@include media('<tablet') {
 			position: relative;
 			display: block;
@@ -179,6 +198,7 @@
 	top: calc(100% + 20px);
 	transform: translateX(-50%);
 	visibility: hidden;
+
 	&:after {
 		content: '';
 		display: block;
@@ -189,6 +209,7 @@
 		transform: translateX(-50%);
 		width: 100%;
 	}
+
 	&:before {
 		content: '';
 		display: block;
@@ -221,9 +242,15 @@
 			color: black;
 			display: block;
 			padding: 10px;
+
 			@include media('<tablet') {
-				padding:3px 5px;
+				padding: 3px 5px;
 			}
+
+			@include media('<phone') {
+				padding: 0 5px;
+			}
+
 			&:hover {
 				background: #deddda;
 				color: red;
@@ -233,54 +260,23 @@
 	}
 }
 
-.wrap.slide {
-	.drop {
-		@include media('<tablet') {
-			max-height:0;
-		  transition:all 0.25s linear;	
-		}
-	}	
-	.drop > ul {
-		@include media('<tablet') {
-			transition: transform 1s, opacity 1s, visibility 0.7s;
-			transform:translateY(-100%)
-		}
-	}
-}
-
-.wrap.slide.active {
-	.drop {
-		@include media('<tablet') {
-			max-height:4000px;
-			margin: 0 -15px;
-	  }
-	} 
-	.drop > ul {
-		@include media('<tablet') {
-			transform:translateY(0);
-		}
-	}
-}
-
-.side-push.active {
-	.menu > .opener:after {
-		@include media('<tablet') {
-			top: 20px;
-		}
-	}
-	.menu > .opener span {
-		@include media('<tablet') {
-		 opacity: 1;
-	  }
-  }
-}  
 
 .resize-active {
 	.hold,
 	.drop,
 	.drop > ul {
 		@include media('<tablet') {
-		 transition:none !important;
-	  }
+			transition:none !important;
+		}
 	}  
+}
+
+.nav-active {
+	.drop {
+		@include media('<tablet') {
+			margin: 0 -15px;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 }

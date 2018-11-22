@@ -3,93 +3,88 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="css/all.css"/>
+	<title>Kluger</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header-bg">  <!---------header------------->
+		<!---------header------------->
+		<header class="header">
 			<div class="container">
-				<div class="wrap slide">
-					<div class="header">
-						<div class="logo">
-							<a href="#">
-								<img src="img/logo.png" alt="logo">
-							</a>
+				<div class="header-block">
+					<strong class="logo">
+						<a href="#">
+							<img src="img/logo.png" alt="logo">
+						</a>
+					</strong>
+					<nav class="menu">
+						<a href="#" class="opener"><span>Menu</span></a>
+						<div class="drop">
+							<ul>
+								<li><a href="#">Startseite</a></li>
+								<li><a href="#">Unternehmen</a></li>
+								<li class="submenu-holder">
+									<a href="#">Dienstleistungen</a>
+									<div class="dropdown">
+										<ul class="drop-list">
+											<li><a href="#">Über uns</a></li>
+											<li><a href="#">Karriere</a></li>
+											<li><a href="#">Qualität</a></li>
+											<li><a href="#">Kunden/Referenzen</a></li>
+											<li><a href="#">Betriebsausstattung</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">Kontakt</a></li>
+							</ul>
 						</div>
-						<nav class="menu">
-							<a href="#" class="opener"><span>Menu</span></a>
-							<div class="drop">
-								<ul>
-									<li><a href="#">Startseite</a></li>
-									<li><a href="#">Unternehmen</a></li>
-									<li class="submenu-holder">
-										<a href="#">Dienstleistungen</a>
-										<div class="dropdown">
-											<ul class="drop-list">
-												<li><a href="#">Über uns</a></li>
-												<li><a href="#">Karriere</a></li>
-												<li><a href="#">Qualität</a></li>
-												<li><a href="#">Kunden/Referenzen</a></li>
-												<li><a href="#">Betriebsausstattung</a></li>
-											</ul>
-										</div>
-									</li>
-									<li><a href="#">Kontakt</a></li>
-								</ul>
-							</div>
-						</nav>
-					</div>
+					</nav>
 				</div>
 			</div>
-		</header>        <!--------end header----------->
-		<div class="multiple-items"> <!------------slide----------->
-			<div>
+		</header>
+		<!------------banner-slide----------->
+		<div class="banner-section">
+			<div class="hero-slider">
 				<div class="slide-img" style="background-image: url(img/slide1.png);">
 					<div class="container">
 						<h1>
 							<span class="text-wrap">
-								<span class="text-one">machen aus</span><span class="text-two">Ideen</span>
+								<span class="text-xs">machen aus</span><span class="text-sm">Ideen</span>
 							</span>
 							<span class="text-wrap">
-								<span class="text-three">Wir</span><span class="text-four">Lösungen</span>
+								<span class="text-ld">Wir</span><span class="text-md">Lösungen</span>
 							</span>
 						</h1>
 					</div>
 				</div>
-			</div>
-			<div>
 				<div class="slide-img" style="background-image: url(img/slide2.png);">
 					<div class="container">
 						<h1>
 							<span class="text-wrap">
-								<span class="text-one">machen aus</span><span class="text-two">Ideen</span>
+								<span class="text-xs">machen aus</span><span class="text-sm">Ideen</span>
 							</span>
 							<span class="text-wrap">
-								<span class="text-three">Wir</span><span class="text-four">Lösungen</span>
+								<span class="text-ld">Wir</span><span class="text-md">Lösungen</span>
 							</span>
 						</h1>
 					</div>
 				</div>
-			</div>
-			<div>
 				<div class="slide-img" style="background-image: url(img/slide3.png);">
 					<div class="container">
 						<h1>
 							<span class="text-wrap">
-								<span class="text-one">machen aus</span><span class="text-two">Ideen</span>
+								<span class="text-xs">machen aus</span><span class="text-sm">Ideen</span>
 							</span>
 							<span class="text-wrap">
-								<span class="text-three">Wir</span><span class="text-four">Lösungen</span>
+								<span class="text-ld">Wir</span><span class="text-md">Lösungen</span>
 							</span>
 						</h1>
 					</div>
 				</div>
 			</div>
-		</div>  							<!------------ end slide----------->
-		<div class="contact-wrap">  <!------------contacts----------->
+		</div>
+		<!------------contacts----------->
+		<div class="contact-wrap">
 			<div class="container">
 				<h4>Kontakt</h4>
 				<span class="contact-text">Wir freuen uns auf Sie!</span>	
@@ -97,16 +92,14 @@
 					<div class="contact-info">
 						<ul>
 							<li>
-								<span class="img-holder">
-									<img src="img/Home.png" alt="Home">
+								<span class="img-holder icon-home">
 								</span>
-								<span class="txt-contact">Kluger Sondermaschinenbau<br>
-									Am Industriepark 23a<br>
-								84453 Mühldorf a. Inn</span>
+								<span class="txt-contact">Kluger Sondermaschinenbau Am Industriepark 23a 84453 Mühldorf a. Inn
+								</span>
 							</li>
 							<li>
-								<span class="img-holder">
-									<img src="img/phone.png" alt="phone">
+								<span class="img-holder icon-phone">
+
 								</span>
 								<div class="txt-contact">
 									<span>Tel.: <a href="tel:+4908631/987090">+49 (0) 8631/98709 - 0</a></span>
@@ -114,39 +107,40 @@
 								</div>
 							</li>
 							<li>
-								<span class="img-holder">
-									<img src="img/mail.png" alt="mail">
+								<span class="img-holder icon-mail">
 								</span>
-								<a href="mailto:info@kluger-maschinenbau.de">info@kluger-maschinenbau.de</a>
+								<span class="txt-contact">
+									<a href="mailto:info@kluger-maschinenbau.de">info@kluger-maschinenbau.de</a>
+								</span>
 							</li>
 						</ul>	
 						<div class="contact-map">
-							<a href="#"> <img src="img/map2.png" alt="map"></a>
+							<img src="img/map2.png" alt="map">
 						</div>				
 					</div>
 					<form class="contact-form" action="#" method="post">
 						<div class="contact-holder">
-							<div class="form-holder">
+							<div class="input-holder">
 								<label for="vorname">Vorname</label> 
 								<input type="text" name="name" required  id="vorname">
 							</div>
-							<div class="form-holder">
+							<div class="input-holder">
 								<label for="name">Name</label>
 								<input type="text" name="name" required  id="name">
 							</div>
-							<div class="form-holder">
+							<div class="input-holder">
 								<label for="tel">Telefon</label> 
 								<input type="text" name="name" required  id="tel">
 							</div>
-							<div class="form-holder">
+							<div class="input-holder">
 								<label for="e-mail">E-Mail</label> 
 								<input type="text" name="name" required  id="e-mail">
 							</div>
-							<div class="form-holder">
+							<div class="input-holder">
 								<label for="betreff">Betreff</label> 
 								<input type="text" name="name" required  id="betreff">
 							</div>
-							<div class="form-holder">
+							<div class="input-holder">
 								<label for="masseg">Text</label>
 								<textarea name="comment" id="masseg" required></textarea>
 							</div>
@@ -157,8 +151,9 @@
 					</form>
 				</div>
 			</div>	
-		</div>  <!------------end contacts----------->
-		<footer class="footer">  <!------------footer----------->
+		</div>
+		<!------------footer----------->
+		<footer class="footer">
 			<div class="container">
 				<div class="container-footer">
 					<div class="kontaktadresse">
@@ -187,7 +182,7 @@
 					<div class="lage">
 						<h3 class="name">Lage & Anfahrt</h3>
 						<div class="map-holder">
-							<a href="#"><img src="img/Map.png" alt="map"></a>
+							<img src="img/Map.png" alt="map">
 						</div>
 					</div>
 				</div>
@@ -201,7 +196,7 @@
 					</ul>
 				</div>
 			</div>
-		</footer>  <!------------end footer----------->
+		</footer>
 	</div>
 	<script src="js/all.js"></script>
 </body>

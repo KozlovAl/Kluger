@@ -19,12 +19,14 @@ $media-expressions: (
 );
 
 
-
-@import 'assets/include-media';
+@import 'assets/vendors/normalize';
+@import 'assets/vendors/stylesheet';
+@import 'assets/vendors/include-media';
 @import 'assets/common';
-@import 'assets/slick';
+@import 'assets/vendors/slick-default';
 @import 'assets/header';
+@import 'assets/hero-slider';
 @import 'assets/footer';
 @import 'assets/contacts-page';
-@import 'assets/cards-page';
-@import 'assets/page-with-tab';
+@import 'assets/about-us';
+@import 'assets/services';

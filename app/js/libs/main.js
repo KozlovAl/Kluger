@@ -1,11 +1,32 @@
 $(document).ready(function(){
-  $('.multiple-items').slick({
+
+	//// Hero-slider///
+  $('.hero-slider').slick({
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   dots: true,
   arrows: false,
   autoplay: true,
+});
+
+// slider-servises//
+ $('.slider-services').slick({
+ 	autoplay: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.services-nav'
+});
+$('.services-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.slider-services',
+  centerMode: true,
+  centerPadding: '0',
+  focusOnSelect: true,
+  arrows: false,
 });
 });
 
@@ -223,24 +244,6 @@ function initTabs() {
 
 
 
- $('.slider-for').slick({
- 	autoplay: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  asNavFor: '.slider-for',
-  centerMode: true,
-  centerPadding: '0',
-  focusOnSelect: true,
-  arrows: false,
-});
-
 
 // page init
 jQuery(function(){
@@ -249,15 +252,9 @@ jQuery(function(){
 
 // mobile menu init
 function initMobileNav() {
-	jQuery('.wrap').mobileNav({
-		menuActiveClass: 'active',
+	jQuery('body').mobileNav({
+		menuActiveClass: 'nav-active',
 		menuOpener: '.opener'
-	});
-	jQuery('.wrap2').mobileNav({
-		hideOnClickOutside: true,
-		menuActiveClass: 'active',
-		menuOpener: '.opener',
-		menuDrop: '.drop'
 	});
 }
 

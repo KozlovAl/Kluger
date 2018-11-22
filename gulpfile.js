@@ -28,7 +28,6 @@ gulp.task('css', function() {
   return gulp.src([
         'app/css/libs/slick-theme.css',
         'app/css/libs/slick.css',
-        'app/css/libs/stylesheet.css',
         ])
     .pipe(concat('all.css'))
     .pipe(gulp.dest('app/css/'));

@@ -2,25 +2,36 @@
 
 .contact-wrap {
 	background: #deddda;
+
 	h4 {
 		font-size: 20px;
 		color: #ac191d;
 		padding: 22px 0 0 22px;
+
+		@include media('<phone') {
+			padding: 22px 0 0 0;
+		}
 	}
+
 	.contact-text {
 		font-size: 35px;
 		padding: 0 0 0 22px;
+		font-weight: bold;
+
 		@include media('<phone') {
-			font-size: 30px;
+			font-size: 28px;
 			padding: 0;
 		}
 	}
+
 	.contact {
 		display: flex;
 		padding: 22px;
+
 		@include media('<desktop') {
 			padding: 22px 0;
 		}
+
 		@include media('<tablet') {
 			flex-direction: column;
 		}
@@ -30,36 +41,77 @@
 .contact-info,
 .contact-form {
 	width: 50%;
+
 	@include media('<tablet') {
 		width: 100%;
 	}
 }
 
 .contact-info {
+	position: relative;
+	padding: 0 20px 0 0;
+	overflow-wrap: break-word;
+
+	@include media('<phone') {
+		padding: 0;
+	}
+
+	&:after {
+		content: '';
+		width: 3px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 30px;
+		background:#fff;
+
+		@include media('<tablet') {
+			display: none;
+		}
+	}
+
 	@include media('<tablet') {
 			margin: 0 0 20px 0;
 		}
+
 	li {
 		display: flex;
 		align-items: center;
 		padding: 0 0 50px 0;
+
+		@include media('<phone') {
+			flex-direction: column;
+		}
 		span {
 			display: block;
 		}
 	}
+
 	a {
 		font-size: 22px;
+		word-wrap: break-word;
+		width: 74%;
+
 		@include media('<desktop') {
 			font-size: 18px;
 		}
 		&:hover {
-			color: yellow;
+			text-shadow: 1px 1px 2px , 0 0 1em red;
+			transition: all .5s;
 		}
 	}
  .txt-contact {
+ 		width: 78%;
 		font-size: 22px;
+		word-wrap: break-word;
+
 		@include media('<desktop') {
 			font-size: 18px;
+		}
+
+		@include media('<phone') {
+			width: 100%;
+			text-align: center;
 		}
 	}
 }	
@@ -71,29 +123,34 @@
 	border-radius: 15px;
 	background: white;
 	margin: 0 15px 0 0;
-	img {
+}
+
+.icon-home,
+.icon-phone,
+.icon-mail {
+	&:before {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		font-size: 40px;
 	}
-}
+}	
 
 .contact-map {
 	margin: 0 15px;
+
 	@include media('<tablet') {
 		text-align: center;
 	}
 	img {
 		width: 100%;
-		border: 5px solid white;
-		&:hover {
-			border: 5px solid yellow;
-			transform: scale(1.02)
-		}		
+		border: 5px solid white;	
+
 		@include media('<tablet') {
 			width: inherit;
 		}
+
 		@include media('<phone') {
 			width: 100%;
 		}
@@ -102,15 +159,17 @@
 
 .contact-form {
 	padding: 0 0 0 30px;
+
 	@include media('<tablet') {
 		padding: 0;
 	}
 }
 
-.form-holder {
+.input-holder {
 	label {
 		display: inline-block;
 		font-size: 22px;
+		
 		@include media('<desktop') {
 			font-size: 18px;
 		}
@@ -122,6 +181,10 @@
 		padding: 0 10px;
 		margin: 15px 0;
 		border: none;
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 15px -1px red;
+		}
 	}
 }
 
@@ -140,10 +203,13 @@
 	padding: 10px;
 	background: #333333;
 	color: white;
+	cursor: pointer;
+	font-size: 22px;
 	border: none;
 	&:hover {
-		color: #333333;
-		background: yellow;
+		color: red;
+		box-shadow: 0 0 15px red;
+		transition: all 0.5s;
 	}
 }
 
