@@ -79,6 +79,10 @@
 		align-items: center;
 		padding: 0 0 50px 0;
 
+		@include media('<desktop') {
+			padding: 0 0 30px 0;
+		}
+
 		@include media('<phone') {
 			flex-direction: column;
 		}
@@ -91,13 +95,13 @@
 		font-size: 22px;
 		word-wrap: break-word;
 		width: 74%;
+		transition: .3s;
 
 		@include media('<desktop') {
 			font-size: 18px;
 		}
 		&:hover {
-			text-shadow: 1px 1px 2px , 0 0 1em red;
-			transition: all .5s;
+			color: #ac191d;
 		}
 	}
  .txt-contact {
@@ -169,6 +173,7 @@
 	label {
 		display: inline-block;
 		font-size: 22px;
+		word-break: break-word;
 		
 		@include media('<desktop') {
 			font-size: 18px;
@@ -183,7 +188,7 @@
 		border: none;
 		&:focus {
 			outline: none;
-			box-shadow: 0 0 15px -1px red;
+			box-shadow: 0 0 10px 0px rgba(251, 10, 17, 0.5);
 		}
 	}
 }
@@ -200,16 +205,20 @@
 }
 
 #submit {
-	padding: 10px;
 	background: #333333;
+	border: none;
 	color: white;
 	cursor: pointer;
 	font-size: 22px;
-	border: none;
+	padding: 10px;
+	transition: background 0.3s;
+	min-width: 126px;
+	max-width: 300px;
+	white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 	&:hover {
-		color: red;
-		box-shadow: 0 0 15px red;
-		transition: all 0.5s;
+		background: #ac191d;
 	}
 }
 

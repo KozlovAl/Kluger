@@ -68,14 +68,16 @@
 			color: #333;
 		}
 		a {
+			transition: color .3s ease;
+
 			@include media('<tablet') {
 				display:block;
 				padding:3px 5px;
 			}
 			&:hover {
-				color: #333;
+				color: #deddda;
 				@include media('<tablet') {
-					color: red;
+					color: #ac191d;
 				}
 			}
 		}	
@@ -253,7 +255,7 @@
 
 			&:hover {
 				background: #deddda;
-				color: red;
+				color: #ac191d;
 				opacity: 1;
 			}
 		}

@@ -12,13 +12,14 @@
 	}
 
 	@include media('<tablet') {
-		flex-direction: column;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 40px 0;
 	}
 }
 
 .card-wrap {
 	display: flex;
-	flex-grow: 1;
 	width: 33.33%;
 	word-break: break-word;
 	padding: 40px 45px 60px 45px;
@@ -28,7 +29,15 @@
 	}
 
 	@include media('<tablet') {
+		justify-content: center;
+		padding: 20px 0;
 		width: 100%;
+		&:first-child {
+			padding: 0 0 20px 0;
+		}
+		&:last-child {
+			padding: 20px 0 0 0;
+		}			
 	}
 }
 
@@ -38,6 +47,19 @@
 	border-radius: 10px;
 	background: linear-gradient(to top, #92011a, #c21a20);
 	text-align: center; 
+
+	@include media('<tablet') {
+		flex-grow: unset;
+		max-width: 450px;
+		width: 100%;
+		}
+
+	img {
+
+		@include media('<desktop') {
+			width: 90px;
+		}
+	}
 }
 
 .card-name {
@@ -48,7 +70,8 @@
 	color: white;
 
 	@include media('<desktop') {
-		font-size: 26px;
+		font-size: 22px;
+		line-height: 1.35;
 	}
 }
 
@@ -76,8 +99,13 @@
 	@include media('<desktop') {
 		justify-content: center
 	}
+
 	li {
 		text-align: center;
+
+		img {
+			width: 100%;
+		}
 
 		@include media('<desktop') {
 			margin: 10px 20px;
@@ -89,7 +117,7 @@
 		}
 
 		&:hover {
-			transform: scale(1.02);
+			opacity: .7;
 		}
 	}	
 }

@@ -15,7 +15,8 @@
 		flex-wrap: wrap;
 	}
 	@include media('<tablet') {
-		flex-direction: column;
+		justify-content: center;
+		text-align: center;
 		margin: 0;
 	}
 		.name {
@@ -26,11 +27,12 @@
 	li {
 		color: white;
 		line-height: 1.2;
-		a:hover {
-			color: red;
-			text-shadow: 1px 1px 4px black, 0 0 1em red;
-			transition: all 0.5s;
-		}
+		a {
+			transition: color 0.3s;
+			&:hover {
+				color: #ac191d;
+			}
+		}	
 	}
 }
 
@@ -51,10 +53,10 @@
 }
 
 .lage {
-	width: 50%;
+	max-width: 400px;
 	padding: 0 20px;
 	@include media('<tablet') {
-		padding: 0
+		padding: 0;
 	}	
 }
 
@@ -83,28 +85,49 @@
 	display: flex;
 	font-size: 12.5px;
 	color: #fff;
+	flex-wrap: wrap;
 
 	span {
 		display: inline-block;
 		margin: 0 7px 0 0;
 		white-space: nowrap;
+
+		@include media('<tablet') {
+				margin: 0 0 15px 0;
+				text-align: center;
+				width: 100%;
+			}
 	}
 
-	a:hover {
-		color: red;
-		text-shadow: 1px 1px 4px black, 0 0 1em red;
-		transition: all 0.5s;
+	a {
+		transition: color 0.3s;
+		&:hover {
+			color: #ac191d;
+		}
 	}
 
 	ul {
 		display: flex;
 		flex-wrap: wrap;
+
+		@include media('<tablet') {;
+				width: 100%;
+			}
+
 		@include media('<phone') {
 			display: block;
 		}
+
 		li {
 			margin: 0 15px 5px 0;
 			position: relative;
+
+			@include media('<tablet') {
+				margin: 0 0 15px 0;
+				text-align: center;
+				width: 100%;
+			}
+
 			&:after {
 				content: '';
 				position: absolute;
@@ -112,7 +135,8 @@
 				width: 1px;
 				height: 100%;
 				background: #fff;
-				@include media('<phone') {
+
+				@include media('<tablet') {
 					display: none;
 				}
 			}
