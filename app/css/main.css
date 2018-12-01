@@ -1388,7 +1388,8 @@ p {
     color: white;
     background: #ac191d;
     height: 50px;
-    margin: 5px 5px 5px 0; }
+    margin: 5px 5px 5px 0;
+    word-break: break-word; }
     .tabset li:hover {
       background: #333; }
     @media (max-width: 767px) {
