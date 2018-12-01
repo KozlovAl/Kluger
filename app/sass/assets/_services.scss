@@ -1,8 +1,25 @@
+$black: #333;
+$white: #fff;
+$red: #ac191d; 
+
 .sondermaschinen {
+	background: #deddda;
+	padding: 0 0 25px 0;
+}
+
+.main-holder {
 	padding: 30px 15px 20px 15px;
+
+	@include media('<phone') {
+		padding: 20px 0 0 0;
+	}
 	h3{
 		color: #ac191d;
 		font-size: 35px;
+
+		@include media('<phone') {
+			font-size: 25px;
+		}
 	}
 	p {
 		padding: 0 10px;
@@ -10,20 +27,154 @@
 		font-size: 20px;
 		max-width: 824px;
 		line-height: 1.5;
+
+		@include media('<phone') {
+			font-size: 15px;
+			margin: 0 0 20px 0;
+		}
 	}
-	.example {
-		padding: 25px 0;
-		display: block;
-		color: #ac191d;
-		font-size: 20px;
-		font-weight: bold;
+}
+	
+.example {
+	padding: 25px 0;
+	display: block;
+	color: $red;
+	font-size: 20px;
+	font-weight: bold;
+
+	@include media('<phone') {
+		font-size: 15px;
+		padding: 10px 0 0 0;
 	}
 }
 
 .way {
 	img {
 		width: 100%;
+		@include media('<tablet') {
+			display: none;
+		}
 	}
+}
+
+// accordion //
+.accordion a{
+  background-color: $red;
+}
+.accordion a span{
+  display: block;
+  transform: rotate(-90deg) translateX(-300px);
+}
+.accordion .acc-item {
+  display: inline;
+  overflow: hidden;
+  background: #deddda;
+}
+.accordion .acc-opener {
+  text-decoration: none !important;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  width: 60px;
+  height: 350px;
+  font-size: 20px;
+  float: left;
+  border-left: 10px solid transparent;
+  margin: 0 0 0 10px;
+  padding: 0 15px 0 0;
+  color: $white;
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+  @include media("<desktop") {
+    margin: 0 5px;
+  }
+}
+.accordion .item-active {
+  background: $black;
+}
+.accordion .item-active .acc-opener {
+  background: $black;
+  color: #fff;
+    margin: 0 10px 0 0;
+}
+.accordion .acc-slide {
+  position: relative;
+  overflow: hidden;
+  background: $black;
+  height:350px;
+  float: left;
+}
+.accordion .acc-slide p {
+  margin: 0;
+}
+.accordion .acc-wrapper {
+  padding:15px 15px 15px 0;
+}
+.accordion .acc-wrapper img {
+  height: 320px;
+  max-width: 100%;
+}
+.right-align .acc-opener {
+  float: right;
+}
+
+
+.vertical-accordion {
+    display: none;
+
+  @include media("<tablet") {
+    display: block;
+  }
+}
+.vertical-accordion .acc-item {
+  background: $black;
+  margin: 10px 0px;
+}
+.vertical-accordion .acc-opener {
+  display:block;
+  padding:10px;
+  background:$red;
+  &:hover {
+    background: $black;
+    color:$white;
+  }
+}
+.vertical-accordion .acc-opener span{
+  color: $white;
+}
+.vertical-accordion li.item-active .acc-opener,
+.vertical-accordion li.item-active li.item-active .acc-opener {
+  background: $black;
+}
+.vertical-accordion .active .slide .acc-opener {
+  background:$black;
+}
+.vertical-accordion p {
+  margin:0;
+  padding:10px;
+  background:#CCC;
+}
+.vertical-accordion .slide {
+  width: 280px;
+}
+.vertical-accordion .slide .slide{
+  width: 280px;
+}
+.vertical-accordion ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+.vertical-accordion .item-active .acc-opener {
+  background: $black;
+}
+.vertical-accordion .acc-wrapper img {
+  padding: 10px;
+  display: block;
+	width: 100%;
+	height: auto;
 }
 
 /*tad first page*/
@@ -36,6 +187,7 @@
 
 .container-tab {
 	display: flex;
+
 	@include media('<tablet') {
 		display: block;
 	}
@@ -43,21 +195,39 @@
 
 .tabset {
 	width: 20%;
+
 	@include media('<tablet') {
 		display: flex;
 		width: 100%;
+	}
+
+	@include media('<phone') {
+		transform: rotate(-90deg);
+		display: block;
+		width: fit-content; 
+		margin: 0 0 -20px 15px;
 	}
 	li {
 		color: white;
 		background: #ac191d;
 		height: 50px;
 		margin: 5px 5px 5px 0;
+		&:hover {
+			background: #333;
+		}
+
 		@include media('<tablet') {
 			margin: 0 5px 0 0;
+		}
+
+		@include media('<phone') {
+			width: 125px;
+			margin: 5px 5px 5px 0;
 		}
 		.active {
 			background: #333;
 			margin: 5px -5px 5px 0;
+
 			@include media('<tablet') {
 				margin: 0;
 			}
@@ -69,9 +239,14 @@
 			line-height: 1.2;
 			margin: 0;
 			padding: 0 0 0 15px;
+
 			@include media('<tablet') {
 				padding: 0 15px;
 				text-align: center;
+			}
+
+			@include media('<phone') {
+				font-size: 12px;
 			}
 		}
 	}
@@ -82,10 +257,28 @@
 	padding: 20px 20px;
 	margin: 5px 0;
 	width: 80%;
+
 	@include media('<tablet') {
 		padding: 10px 10px;
 		width: 100%;
 		margin: 0;
+	}
+}
+
+.hero-photo {
+	img {
+		width: 100%;
+	}
+}
+
+.nav-photo-wrap {
+	display: flex;
+	margin: 0 -5px;
+	.nav-photo {
+		margin: 15px 5px 0 5px;
+	}
+	img {
+		width: 100%;
 	}
 }
 
@@ -118,13 +311,21 @@
 		padding: 25px 0 0 0;
 		font-size: 20px;
 		font-weight: bold;
+
+		@include media('<phone') {
+			font-size: 15px;
+		}
 	}
 	li {
     padding: 5px 0;
 		a {
 			border-bottom: 1px solid black;
+
+			@include media('<phone') {
+				font-size: 12px;
+			}
 			&:hover {
-				color: red;
+				color: $red;
 			}
 		}
 	}	
@@ -135,4 +336,14 @@
 	padding: 0 5px;
 }
 
+.accordion {
+  font-size: 15px;
+  background: #ccc;
+  height: 350px;
+  display: block;
+
+  @include media("<tablet") {
+  display: none;
+  }
+}
 
