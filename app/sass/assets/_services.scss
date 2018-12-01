@@ -204,8 +204,8 @@ $red: #ac191d;
 	@include media('<phone') {
 		transform: rotate(-90deg);
 		display: block;
-		width: fit-content; 
-		margin: 0 0 -20px 15px;
+		width: 131px;
+		margin: 0 0 -20px 14px;
 	}
 	li {
 		color: white;
